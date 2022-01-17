@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ constants.TITLE }}
+{% endblock %}
+
+{% block content %}
+    <div class="hero">
+        <div class="hero-content">
+            <div class="left">
+                <h1>APPLICATION DEVELOPER</h1>
+                <h1>SEBASTIAN VALENCIA LASPRILLA</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure odit, quas enim, iste dolorum at itaque sit ea consequatur placeat! Similique tempore reprehenderit obcaecati veritatis explicabo, ducimus delectus ex?</p>
+                <a href="#contact" class="btn">
+                    Contact me!
+                </a>
+            </div>
+            
+            <div class="right">
+                <img src="{{ url_for('static', filename='hero.png') }}" class="responsive">
+            </div>
+        </div>
+    </div>
+    {% include 'portfolio/section-first.html'%}
+    {% include 'portfolio/section-second.html'%}
+    {% include 'portfolio/section-third.html'%}
+{% endblock %}
