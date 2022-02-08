@@ -1,16 +1,20 @@
+html, 
+body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Work Sans', sans-serif;
-    background-color: hsl(0, 0%, 96%);
-    margin: 0;
-    color: #034d6c;
-    height: 100%;
+    background-color: #333;
+    color: #fff;
 }
 
 html body header {
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
-    box-shadow: 0 calc(0.2vw + 0.2vh + 0.2vmin) calc(0.2vw + 0.2vh + 0.2vmin) #ddd;
+    background-color: #814B83;
+    box-shadow: 0 calc(0.1vw + 0.1vh + 0.1vmin) calc(0.5vw + 0.5vh + 0.5vmin) #821B5B;
     padding: 1.5vh calc(0.5vw + 0.5vh + 1vmin);
     position: -webkit-sticky;
 	position: sticky;
@@ -30,6 +34,7 @@ html body nav ul li {
 
 html body nav ul li a {
     padding: 0 calc(0.3vw + 0.3vh + 0.1vmin);
+    cursor: pointer;
 }
 
 header .logo {
@@ -41,13 +46,21 @@ header .logo {
 
 a {
     transition: color 0.4s ease;
-    color: #034d6c;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
 
 a:hover {
-    color: #f84f27;
+    color: #FF66A1;
+}
+
+hr {
+    width: 50%;
+    margin: calc(0.1vw + 0.1vh + 0.1vmin) auto;
+    margin-right: 0;
+    border-color: #034d6c;
+    border: calc(0.001vw + 0.001vh + 0.001vmin) solid #972266;
 }
 
 .hero{
@@ -59,8 +72,6 @@ a:hover {
 
 .hero-content {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
 }
 
 
@@ -117,12 +128,19 @@ a:hover {
     vertical-align: middle;
 }
 
+.contact-first {
+    margin: auto;
+    margin-right: 0;
+    padding: calc(0.2vw + 0.2vh + 0.2vmin);
+    font-size: calc(0.5vw + 0.5vh + 1vmin);
+}
+
 a.btn {
     color: #fff;
 }
 
 .btn:hover {
-    background-color: #e66f55;
+    background-color: #FF66A1;
 }
 
 .content-wrapper {
@@ -138,7 +156,7 @@ a.btn {
 .content h1{
     font-family: 'Work Sans', sans-serif;
     letter-spacing: -0.005em;
-    font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+    font-size: calc(0.5vw + 1vh + 1vmin);
     font-weight: 700;
     margin-bottom: 0;
     margin-top: 0;
@@ -149,8 +167,10 @@ p{
     font-size: calc(0.5vw + 0.5vh + 0.5vmin);
 }
 
-.orange {
-    color: #f84f27;
+.link {
+    color: #FF6427;
+    text-decoration: underline;
+    transition: color 0.4s ease;
 }
 
 .left {
@@ -175,14 +195,17 @@ h3{
     flex-direction: column;
 }
 
-.white-bg {
-    background-color: #fff;
+.bg-1 {
+    background-color: #a24780;
+}
+
+.bg-2 {
+    background-color: #883c6c;
 }
 
 .card {
-    background-color: #fff;
-    box-shadow: 0 calc(0.2vw + 0.2vh + 0.2vmin) calc(0.2vw + 0.2vh + 0.2vmin) #ddd;
-    border: solid calc(0.05vw + 0.05vh + 0.05vmin) #ddd;
+    background-color: #6C457D;
+    box-shadow: 0 calc(0.1vw + 0.1vh + 0.1vmin) calc(0.3vw + 0.3vh + 0.3vmin) #2f173a;
     border-radius: calc(0.2vw + 0.2vh + 0.2vmin);
     padding: calc(0.5vw + 0.5vh + 1vmin) calc(0.5vw + 0.5vh + 1vmin);
     width: calc(6vw + 6vh = 6vmin);
@@ -196,7 +219,7 @@ h3{
     margin-right: calc(0.8vw + 0.8vh + 0.8vmin);
 }
 
-.third-card-wrap {
+.card-wrap {
     margin-top: calc(0.5vw + 0.5vh + 0.5vmin);
     display: flex;
     flex-direction: row;
@@ -208,26 +231,31 @@ h3{
 }
 
 .contact-form input{
+    height: calc(0.5vw + 0.5vh + 0.5vmin);
+    width: 97%;
+}
+
+.contact-form textarea{
+    height: calc(5vw + 5vh + 5vmin);
+    resize: none;
+}
+
+.contact-form input, .contact-form textarea{
+    outline: none;
     font-family: 'DM Sans', sans-serif;
     font-size: calc(0.5vw + 0.5vh + 0.5vmin);
+    color: #fff;
+    background-color: #6C457D;
     border: none;
+    box-shadow: inset 0 calc(0.1vw + 0.1vh + 0.1vmin) calc(0.3vw + 0.3vh + 0.3vmin) #2f173a;
     padding: calc(0.3vw + 0.3vh + 0.3vmin);
-    height: calc(0.5vw + 0.5vh + 0.5vmin);
     margin-bottom: calc(0.5vw + 0.5vh + 0.5vmin);
     border-radius: calc(0.2vw + 0.2vh + 0.2vmin);
     width: 97%;
 }
 
-.contact-form textarea{
-    font-family: 'DM Sans', sans-serif;
-    font-size: calc(0.5vw + 0.5vh + 0.5vmin);
-    border: none;
-    padding: calc(0.3vw + 0.3vh + 0.3vmin);
-    height: calc(5vw + 5vh + 5vmin);
-    margin-bottom: calc(0.5vw + 0.5vh + 0.5vmin);
-    border-radius: calc(0.2vw + 0.2vh + 0.2vmin);
-    width: 97%;
-    resize: none;
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #cccccc;
 }
 
 .contact-form .btn{
@@ -235,7 +263,7 @@ h3{
 }
 
 .footer {
-    padding-top:calc(2vw + 2vh + 2vmin);
+    padding: calc(0.5vw + 1vh + 0.5vmin) 0;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -249,12 +277,6 @@ h3{
     margin: 0 calc(0.3vw + 0.3vh + 0.3vmin);
 }
 
-.credits {
-    padding-top:calc(1vw + 1vh + 1vmin);
-    margin: 0;
-    color: #555;
-}
-
-.credits p {
-    margin: 0;
+.align-end {
+    text-align: end;
 }
