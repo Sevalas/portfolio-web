@@ -21,7 +21,7 @@ def mail():
         send_email(name, email, message)
         return render_template('portfolio/sent_mail.html', constants=Constants)
     else:
-        redirect(url_for('portfolio.index')) 
+        return redirect(url_for('portfolio.index')) 
         
 def send_email(name, email, message):
     sg = sendgrid.SendGridAPIClient(api_key=current_app.config['SENDGRID_API_KEY'])
@@ -43,3 +43,6 @@ def send_email(name, email, message):
 
     mail = Mail(from_email, to_email, 'New portfolio contact {}'.format(email), html_content=html_content)
     response = sg.client.mail.send.post(request_body=mail.get())
+
+def test():
+    print('test')

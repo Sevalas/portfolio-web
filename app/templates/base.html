@@ -13,11 +13,11 @@
     </head>
     <body>
         <header>
-            <div class="logo">SEBASTIAN VALENCIA</div>
+            <div class="logo">SEBASTIAN VALENCIA LASPRILLA</div>
             <nav>
                 <ul>
                     <li><a href="{{url_for('portfolio.index')}}">HOME</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li onclick="contactView()" ><a>CONTACT</a></li>
                 </ul>
             </nav>
         </header>
@@ -27,25 +27,27 @@
         <div class="footer">
             <div class="center full-width">
                 <div class="row">
-                    <h3>BYE</h3>
+                    <h3>HAVE A NICE DAY!</h3>
                 </div>
             </div>
             <div class="center full-width">
                 <div class="row">
-                    <p>Social Networks</p>
+                    <p>Social Networks:</p>
                 </div>
             </div>
             <div class="center full-width social-links">
                 <div class="row">
-                    <a href="#"><img class="social" src="{{ url_for('static', filename='github.png') }}"></a>
-                    <a href="#"><img class="social" src="{{ url_for('static', filename='linkedin.png') }}"></a>
-                </div>
-            </div>
-            <div class="credits">
-                <div class="row">
-                    <p>Made with love by Sebastian Valencia lasprilla</p>
+                    <a href="https://github.com/Sevalas" target="_blank"><img class="social" src="{{ url_for('static', filename='github.png') }}"></a>
+                    <a href="https://www.linkedin.com/in/sebastian-valencia-lasprilla-376b541b9" target="_blank"><img class="social" src="{{ url_for('static', filename='linkedin.png') }}"></a>
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+<script>
+    var is_root = location.pathname == '/';
+    function contactView() {
+        window.location.replace('/#contact');
+    };
+</script>
